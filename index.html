@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grab: a video downloader for Android without the adverts</title>
+<meta name="description" content="Grab is a free Android video and audio downloader with its own ad-blocking browser. No adverts, no accounts, no tracking and no paid version.">
+<meta name="author" content="Jonathan Jackson">
+<link rel="canonical" href="https://customgpter.github.io/grab/">
+<meta name="theme-color" content="#f2f5f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c1413" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Grab">
+<meta property="og:title" content="Grab: a video downloader for Android without the adverts">
+<meta property="og:description" content="Grab is a free Android video and audio downloader with its own ad-blocking browser. No adverts, no accounts, no tracking and no paid version.">
+<meta property="og:url" content="https://customgpter.github.io/grab/">
+<meta property="og:image" content="https://customgpter.github.io/grab/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The round Grab download button beside a grid of video sizes to choose from">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/literata-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/literata-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css?v=1">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Grab","url":"https://customgpter.github.io/grab/","description":"Grab is an Android video and audio downloader with its own ad-blocking browser. It saves the video on the page you are on, in the size you choose.","applicationCategory":"MultimediaApplication","applicationSubCategory":"Video downloader","operatingSystem":"Android 10 or later","softwareVersion":"2.1","downloadUrl":"https://github.com/CustomGPTer/grab/releases/latest/download/Grab.apk","releaseNotes":"https://customgpter.github.io/grab/releases.html","license":"https://www.gnu.org/licenses/gpl-3.0.html","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"inLanguage":"en-GB","image":"https://customgpter.github.io/grab/assets/og.png","featureList":["Built-in browser with advert, tracker and pop-up blocking","Download button that lights up when a page has a video","Video as MP4 in every size the site offers","Sound only as M4A or MP3 with cover art and tags","Subtitles saved inside the video","Queue with pause, resume, Wi-Fi only and timed starts","Private mode and a private folder","Built-in player"],"author":{"@type":"Person","name":"Jonathan Jackson"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Grab","url":"https://customgpter.github.io/grab/","inLanguage":"en-GB"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Grab really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no paid version, no subscription and no adverts, and nothing in the app is locked. It is also open source."}},{"@type":"Question","name":"Is Grab on Google Play?","acceptedAnswer":{"@type":"Answer","text":"No. Grab is a personal project and is downloaded from this site as an Android app file. It needs Android 10 or later on a 64-bit phone, which covers almost every phone sold in recent years."}},{"@type":"Question","name":"Which sites does it work with?","acceptedAnswer":{"@type":"Answer","text":"Grab uses yt-dlp, an open-source download engine that recognises well over a thousand video and audio sites. On a site the engine does not know, Grab offers the stream the page itself was playing. Sites change often, so Grab fetches the newest engine once a day."}},{"@type":"Question","name":"Why will some videos not download?","acceptedAnswer":{"@type":"Answer","text":"Films and programmes on services such as Netflix, Disney+ and Prime Video are locked with copy protection (DRM). Grab does not remove DRM and cannot save them. Now and then a site changes in a way that stops downloads until the engine catches up, which the daily update usually puts right."}},{"@type":"Question","name":"Am I allowed to download a video?","acceptedAnswer":{"@type":"Answer","text":"That depends on the video and the site. Download only what you have the right to keep: your own uploads, videos offered for download or under an open licence, or where the law where you live allows a copy for yourself. Many sites' terms do not allow downloading, and keeping to them is up to you."}},{"@type":"Question","name":"Does Grab see what I watch or save?","acceptedAnswer":{"@type":"Answer","text":"No. Grab has no servers. Pages load straight from the sites you visit, and files are saved straight to your phone."}},{"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. If a video is only shown to people who are signed in to its site, sign in on that site in Grab's browser. Grab tries the download without your login first and uses it only if that fails."}},{"@type":"Question","name":"Where do the files go?","acceptedAnswer":{"@type":"Answer","text":"Videos go to Movies/Grab and sound to Music/Grab, where your gallery and music apps can see them. Files you save privately stay inside Grab, hidden from other apps, and are deleted if you uninstall it."}},{"@type":"Question","name":"Why is the download so large?","acceptedAnswer":{"@type":"Answer","text":"The file is about 82 MB because Grab carries its whole download engine with it: yt-dlp, the Python it runs on, and FFmpeg for joining and converting files."}},{"@type":"Question","name":"How do I update Grab?","acceptedAnswer":{"@type":"Answer","text":"Download the latest version from this site and install it over the one you have. Your downloads, queue, shortcuts and settings are kept."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="wrap">
+<a class="brand" href="./" aria-label="Grab home"><svg viewBox="0 0 108 108" aria-hidden="true"><rect width="108" height="108" rx="24" fill="#0f766e"/><path d="M54 26v32M42 46l12 12 12-12M32 64v12q0 4 4 4h36q4 0 4-4V64" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Grab</span></a>
+<nav aria-label="Main"><ul><li><a href="./#features">Features</a></li><li><a href="compare.html">Compare</a></li><li><a href="releases.html">Releases</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="licences.html">Licences</a></li></ul></nav>
+</div>
+</header>
+<main id="main">
+<div class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<h1>A video downloader without the adverts</h1>
+<p class="lede">Grab is an Android app with its own browser. Open a page with a video on it and the round Download button turns red. Tap it, choose a size, and the file is saved to your phone.</p>
+<p class="lede">It is free, with no paid version. There are no adverts in the app, and it blocks them on the pages you visit.</p>
+<p class="get"><a class="button" href="https://github.com/CustomGPTer/grab/releases/latest/download/Grab.apk">Download for Android</a></p>
+<p class="facts">Free, with nothing to unlock. Android 10 or later. No ads, no accounts, no tracking. <a href="compare.html">Compare</a> &middot; <a href="releases.html">Release notes</a></p>
+<p class="facts">Chrome may say the file might be harmful. It shows this for app files that do not come from Google Play. Choose Download anyway.</p>
+</div>
+<div class="demo" role="img" aria-label="A web page with a video on it. The round Download button in the corner has turned red and shows a count of one. Below it, a sheet offers the video in each size from 2160p to 240p with its file size, or as sound only, with 1080p chosen."><div class="view"><div class="bar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 4.5 5.3v6.1c0 4.6 3.1 8.6 7.5 10.1 4.4-1.5 7.5-5.5 7.5-10.1V5.3z" fill="currentColor"/><path d="m8.6 12.2 2.5 2.5 4.5-4.9" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>example.org/films/coast-walk</span></div><div class="player"></div><div class="fab"><svg viewBox="0 0 108 108" aria-hidden="true"><path d="M54 22v40M38 48l16 16 16-16M30 70v8q0 6 6 6h36q6 0 6-6v-8" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="n">1</span></div></div><div class="sheet"><p class="name">A walk along the coast</p><div class="tiles"><div class="tile" style="--i:0"><b>2160p</b>1.21 GB</div><div class="tile" style="--i:1"><b>1440p</b>612 MB</div><div class="tile on" style="--i:2"><b>1080p</b>318 MB</div><div class="tile" style="--i:3"><b>720p</b>164 MB</div><div class="tile" style="--i:4"><b>480p</b>92 MB</div><div class="tile" style="--i:5"><b>360p</b>58 MB</div><div class="tile" style="--i:6"><b>240p</b>31 MB</div><div class="tile" style="--i:7"><b>M4A</b>9.4 MB</div><div class="tile" style="--i:8"><b>MP3</b>Audio</div></div><div class="acts"><span>Cancel</span><span>Rename</span><span class="do">Download</span></div></div></div>
+</div>
+</div>
+
+<section id="how" aria-labelledby="how-h">
+<div class="wrap">
+<h2 id="how-h">How it works</h2>
+<p class="intro">Most downloaders have you copy a link, leave the page and paste it somewhere else. Grab downloads from the page you are already on.</p>
+<ol class="steps">
+<li><h3>Open the page</h3><p>In Grab's own browser, with adverts, trackers and pop-ups blocked. Or share a link to Grab from any other app.</p></li>
+<li><h3>Tap the button</h3><p>The round Download button is grey until Grab finds a video on the page, then turns red. Drag it to wherever suits your thumb.</p></li>
+<li><h3>Choose a size</h3><p>Every size the site offers, with its file size where the site states it, such as <span class="path">1080p &middot; 318 MB</span>. Or take the sound only.</p></li>
+</ol>
+</div>
+</section>
+
+<section id="features" aria-labelledby="features-h">
+<div class="wrap">
+<h2 id="features-h">Made to finish the job</h2>
+<p class="intro">Start a download and get on with something else. Grab carries on in the background and tells you when the file is ready.</p>
+<dl class="features">
+<div><dt>The best the site has</dt><dd>Every resolution the site offers, up to the highest, saved as MP4 so it plays on anything.</dd></div>
+<div><dt>Sound only</dt><dd>M4A or MP3, with the cover picture, title and artist filled in.</dd></div>
+<div><dt>Subtitles and sections</dt><dd>Subtitles are saved inside the video when the site has them. For a long video, give a start and an end time and download just that part.</dd></div>
+<div><dt>A queue that looks after itself</dt><dd>Up to three downloads at once, with pause and resume. The queue survives the app being closed, and a retry carries on from where it stopped.</dd></div>
+<div><dt>On your terms</dt><dd>Keep downloads to Wi-Fi to spare your mobile data, or set one to start later, such as overnight.</dd></div>
+<div><dt>Whole lists</dt><dd>A page or link with several videos gives a tick list. Each file is named after its own video, and you can rename any of them.</dd></div>
+<div><dt>Private mode and a private folder</dt><dd>Private mode has its own logins, keeps no history and is wiped when you leave it. Files saved privately are kept out of your gallery.</dd></div>
+<div><dt>A player built in</dt><dd>Watch what you saved without leaving the app, with speed and subtitle controls. It carries on where you stopped.</dd></div>
+</dl>
+</div>
+</section>
+
+<section id="permissions" aria-labelledby="permissions-h">
+<div class="wrap">
+<h2 id="permissions-h">What it asks of your phone</h2>
+<p class="intro">Very little. Grab has no access to your photos, files, contacts, location, camera or microphone, and uses what it does have only for what is listed here.</p>
+<div class="scroll">
+<table>
+<thead><tr><th scope="col">Access</th><th scope="col">What Grab does with it</th><th scope="col">What it never does</th></tr></thead>
+<tbody>
+<tr><th scope="row">Internet access</th><td>Loads the pages you open, downloads the videos you choose, and checks GitHub once a day for a newer download engine.</td><td>Send anything to the developer. Grab has no servers of its own.</td></tr>
+<tr><th scope="row">Notifications</th><td>Shows how a download is going and tells you when the file is ready.</td><td>Send adverts, offers or reminders.</td></tr>
+<tr><th scope="row">Running in the background</th><td>Keeps a download going when you switch to another app or turn the screen off.</td><td>Stay running once the queue is empty.</td></tr>
+<tr><th scope="row">Alarms</th><td>Starts a download at the time you set for it.</td><td>Wake the phone for anything else.</td></tr>
+<tr><th scope="row">The link you last copied</th><td>If it is a web link, offers to download it when you open Grab. A switch in Settings turns this off.</td><td>Send what you copied anywhere, or keep a record of it.</td></tr>
+</tbody>
+</table>
+</div>
+<p class="after-table">The detail is in the <a href="privacy.html">privacy policy</a>.</p>
+</div>
+</section>
+
+<section id="privacy" aria-labelledby="privacy-h">
+<div class="wrap">
+<h2 id="privacy-h">What you watch is your business</h2>
+<ul class="plain">
+<li><h3>No servers</h3><p>Grab has no accounts and no servers of its own. The developer never learns what you browse, watch or save.</p></li>
+<li><h3>No ads, no tracking</h3><p>There is no advertising, no analytics and no tracking in the app or on this site.</p></li>
+<li><h3>Files stay put</h3><p>Downloads go straight from the website to your phone. Nothing is uploaded anywhere.</p></li>
+</ul>
+</div>
+</section>
+
+<section id="free" aria-labelledby="free-h">
+<div class="wrap">
+<h2 id="free-h">Free, including what others charge for</h2>
+<p class="intro">Grab has no paid version and carries no adverts. Going by their own Google Play listings, other well-known Android downloaders show adverts, and one sells its extras.</p>
+<dl class="features">
+<div><dt>No adverts</dt><dd>1DM, Video Downloader by InShot and Advanced Download Manager all carry adverts. 1DM sells an edition without them.</dd></div>
+<div><dt>Downloads at a set time</dt><dd>A paid extra in 1DM.</dd></div>
+<div><dt>Adverts blocked on the pages you visit</dt><dd>Not listed by Video Downloader by InShot or by Advanced Download Manager.</dd></div>
+<div><dt>Open source</dt><dd>Grab's source code is public, so anyone can check what it does.</dd></div>
+</dl>
+<p class="more"><a href="compare.html">See the full comparison, with sources</a></p>
+</div>
+</section>
+
+<section id="questions" aria-labelledby="questions-h">
+<div class="wrap">
+<h2 id="questions-h">Questions</h2>
+<div class="faq">
+<div><h3>Is Grab really free?</h3><p>Yes. There is no paid version, no subscription and no adverts, and nothing in the app is locked. It is also open source. <a href="compare.html">See the comparison</a>.</p></div><div><h3>Is Grab on Google Play?</h3><p>No. Grab is a personal project and is downloaded from this site as an Android app file. It needs Android 10 or later on a 64-bit phone, which covers almost every phone sold in recent years.</p></div><div><h3>Which sites does it work with?</h3><p>Grab uses yt-dlp, an open-source download engine that recognises well over a thousand video and audio sites. On a site the engine does not know, Grab offers the stream the page itself was playing. Sites change often, so Grab fetches the newest engine once a day.</p></div><div><h3>Why will some videos not download?</h3><p>Films and programmes on services such as Netflix, Disney+ and Prime Video are locked with copy protection (DRM). Grab does not remove DRM and cannot save them. Now and then a site changes in a way that stops downloads until the engine catches up, which the daily update usually puts right.</p></div><div><h3>Am I allowed to download a video?</h3><p>That depends on the video and the site. Download only what you have the right to keep: your own uploads, videos offered for download or under an open licence, or where the law where you live allows a copy for yourself. Many sites' terms do not allow downloading, and keeping to them is up to you. The detail is in the <a href="terms.html#downloads">terms</a>.</p></div><div><h3>Does Grab see what I watch or save?</h3><p>No. Grab has no servers. Pages load straight from the sites you visit, and files are saved straight to your phone.</p></div><div><h3>Do I need an account?</h3><p>No. If a video is only shown to people who are signed in to its site, sign in on that site in Grab's browser. Grab tries the download without your login first and uses it only if that fails.</p></div><div><h3>Where do the files go?</h3><p>Videos go to Movies/Grab and sound to Music/Grab, where your gallery and music apps can see them. Files you save privately stay inside Grab, hidden from other apps, and are deleted if you uninstall it.</p></div><div><h3>Why is the download so large?</h3><p>The file is about 82 MB because Grab carries its whole download engine with it: yt-dlp, the Python it runs on, and FFmpeg for joining and converting files.</p></div><div><h3>How do I update Grab?</h3><p>Download the latest version from this site and install it over the one you have. Your downloads, queue, shortcuts and settings are kept.</p></div>
+</div>
+</div>
+</section>
+
+<section id="get" aria-labelledby="get-h">
+<div class="wrap"><div class="measure">
+<h2 id="get-h">Getting Grab</h2>
+<p>Grab is a personal project and is free, with no paid version. It is downloaded from this site as an Android app file and is not on Google Play. It runs on 64-bit phones and tablets with Android 10 or later.</p>
+<p class="get"><a class="button" href="https://github.com/CustomGPTer/grab/releases/latest/download/Grab.apk">Download for Android</a></p>
+<p>When you download, Chrome may warn that the file might be harmful. It shows this warning for app files that do not come from Google Play; choose Download anyway. If you want to be sure the file is the real one, compare it with the checksum in the <a href="releases.html#checking">release notes</a>.</p>
+<p>Open the downloaded file to install it. The first time, Android asks you to allow your browser to install apps. Google Play Protect may also step in, because Grab is an app it has not seen before: choose More details, then Install anyway. To update, install the latest version over the one you have: your downloads and settings are kept. What changed in each version is in the <a href="releases.html">release notes</a>.</p>
+<p>Grab is open source, and its <a href="https://github.com/CustomGPTer/grab/tree/source">source code is on GitHub</a>. For a question, a problem, or anything about your data, <a href="https://github.com/CustomGPTer/grab/issues">open an issue on GitHub</a>.</p>
+</div></div>
+</section>
+</main>
+<footer class="colophon">
+<div class="wrap">
+<div>
+<p>&copy; 2026 Jonathan Jackson. Grab is an independent app.</p>
+<p>This site uses no cookies and no tracking. It is set in Literata and Atkinson Hyperlegible.</p>
+</div>
+<nav aria-label="Footer"><ul>
+<li><a href="./">Home</a></li>
+<li><a href="compare.html">Compare</a></li>
+<li><a href="releases.html">Release notes</a></li>
+<li><a href="privacy.html">Privacy policy</a></li>
+<li><a href="terms.html">Terms of use</a></li>
+<li><a href="licences.html">Licences</a></li>
+<li><a href="https://github.com/CustomGPTer/grab/tree/source">Source code</a></li>
+<li><a href="https://github.com/CustomGPTer/grab/issues">Contact</a></li>
+</ul></nav>
+</div>
+</footer>
+</body>
+</html>
