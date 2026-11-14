@@ -1,0 +1,8 @@
+<resources>
+    <!-- Light by day, dark by night (values-night). The browser's pages follow the same choice. -->
+    <style name="Theme.Grab" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.Grab.Player" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>
