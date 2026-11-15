@@ -7,6 +7,7 @@ This branch holds the app's public website:
 - [Home page](https://customgpter.github.io/grab/)
 - [How it compares with other downloaders](https://customgpter.github.io/grab/compare.html)
 - [Release notes](https://customgpter.github.io/grab/releases.html)
+- [More apps from the same developer](https://customgpter.github.io/grab/more-apps.html)
 - [Privacy policy](https://customgpter.github.io/grab/privacy.html)
 - [Terms of use](https://customgpter.github.io/grab/terms.html)
 - [Licences and credits](https://customgpter.github.io/grab/licences.html)
