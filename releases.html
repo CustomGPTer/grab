@@ -26,6 +26,8 @@
 <link rel="preload" href="assets/fonts/literata-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css?v=2">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Grab","item":"https://customgpter.github.io/grab/"},{"@type":"ListItem","position":2,"name":"Release notes","item":"https://customgpter.github.io/grab/releases.html"}]}</script>
+<link rel="stylesheet" href="assets/apps-list.css?v=1">
+<script src="assets/apps-list.js?v=1" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -40,17 +42,29 @@
 <div class="measure">
 <h1>Release notes</h1>
 <p class="lede">What was added, improved and fixed in each version of Grab, newest first. The current version is 2.1.</p>
-<div class="get">
-<a class="button" href="https://github.com/CustomGPTer/grab/releases/latest/download/Grab.apk">Download the latest version</a>
-<p class="facts">Version 2.1. Android app file, 81.9 MB. Android 10 or later, 64-bit. Free.</p>
+<div class="gate-scope" id="download"><div class="law-box" data-gate><label><input type="checkbox"> I understand and will use this app within the law</label><p>Grab downloads things other people own. <a href="terms.html#law">What the law says</a></p><noscript><p>Turn on JavaScript to tick the box and download.</p></noscript></div><div class="get">
+<a class="button" data-href="https://github.com/CustomGPTer/grab/releases/latest/download/Grab.apk" aria-disabled="true" role="link" tabindex="-1">Download the latest version</a>
+<p class="facts">Version 2.2. Android app file, 81.9 MB. Android 10 or later, 64-bit. Free.</p></div>
 <p class="facts">Chrome may say the file might be harmful. It shows this for app files that do not come from Google Play. Choose Download anyway. To be sure of the file, see <a href="#checking">Checking your download</a>.</p>
 </div>
-<nav class="contents" aria-label="Versions"><strong>Versions</strong><ul><li><a href="#v2-1">2.1&ensp;Sizes on a grid, and renaming</a></li><li><a href="#v2-0">2.0&ensp;A new Download button, a home page and Settings</a></li><li><a href="#v1-4">1.4&ensp;Adverts in the YouTube player</a></li><li><a href="#v1-3">1.3&ensp;Pages that would not respond</a></li><li><a href="#v1-2">1.2&ensp;Page tools</a></li><li><a href="#v1-1">1.1&ensp;A thorough overhaul</a></li><li><a href="#v1-0">1.0&ensp;First release</a></li></ul></nav>
+<nav class="contents" aria-label="Versions"><strong>Versions</strong><ul><li><a href="#v2-2">2.2&ensp;Adverts on video sites stopped earlier</a></li><li><a href="#v2-1">2.1&ensp;Sizes on a grid, and renaming</a></li><li><a href="#v2-0">2.0&ensp;A new Download button, a home page and Settings</a></li><li><a href="#v1-4">1.4&ensp;Adverts in video players</a></li><li><a href="#v1-3">1.3&ensp;Pages that would not respond</a></li><li><a href="#v1-2">1.2&ensp;Page tools</a></li><li><a href="#v1-1">1.1&ensp;A thorough overhaul</a></li><li><a href="#v1-0">1.0&ensp;First release</a></li></ul></nav>
+
+<article class="release" id="v2-2">
+<p class="ver">Version 2.2</p>
+<h2>Adverts on video sites stopped earlier</h2>
+<p class="when"><span class="tag">Latest</span>Released 21 November 2026</p>
+<h3>Improved</h3>
+<ul><li>Adverts on video sites are stopped before they are lined up: the advert instructions are taken out of the page before the site's player reads them.</li><li>A fixed hold that some players apply before a video starts is cut short.</li><li>An advert that starts anyway is covered with &ldquo;Skipping advert&hellip;&rdquo;, muted and skipped at once. If it is still stuck after 8 seconds, the cover lifts.</li><li>The grey play-button picture shown before a video loads is gone, on every site.</li></ul>
+<h3>Added</h3>
+<ul><li>A setting, on by default, that stops these adverts loading.</li><li>An advert timing section in the page report (menu &rsaquo; Copy page report).</li></ul>
+<h3>Source code</h3>
+<ul><li>Grab's code for this version is published under GPL-3.0 as <a href="https://github.com/CustomGPTer/grab/releases/download/v2.2/Grab-2.2-source.zip">Grab-2.2-source.zip</a> on the release.</li></ul>
+</article>
 
 <article class="release" id="v2-1">
 <p class="ver">Version 2.1</p>
 <h2>Sizes on a grid, and renaming</h2>
-<p class="when"><span class="tag">Latest</span>Released 14 November 2026</p>
+<p class="when">Released 14 November 2026</p>
 <h3>Added</h3>
 <ul><li>The size sheet is a grid of tiles, one for each resolution the site offers, with sound only as M4A or MP3 alongside. Each tile shows its file size where the site states one.</li><li>Rename, on the size sheet, to choose the file's name before it downloads.</li><li>Rename in the Files tab, for files you have already saved.</li></ul>
 <h3>Improved</h3>
@@ -68,9 +82,9 @@
 
 <article class="release" id="v1-4">
 <p class="ver">Version 1.4</p>
-<h2>Adverts in the YouTube player</h2>
+<h2>Adverts in video players</h2>
 <h3>Added</h3>
-<ul><li>Adverts that play inside the YouTube player are skipped. The blocklist cannot stop these, because they are sent from the same servers as the video itself.</li></ul>
+<ul><li>Adverts that play inside a site's video player are skipped. The blocklist cannot stop these, because they are sent from the same servers as the video itself.</li></ul>
 </article>
 
 <article class="release" id="v1-3">
@@ -114,8 +128,8 @@
 <li>Every version is signed with the same key, so Android accepts an update only if it comes from the same developer.</li>
 </ul>
 <h2 id="checking">Checking your download</h2>
-<p>The file for version 2.1 is 81,865,944 bytes. Its SHA-256 checksum is:</p>
-<p class="sum"><code>c6d39a3f1e961708167b8d1875b494717c87ebc895a6b1bb00aed45048c8f44a</code></p>
+<p>The file for version 2.2 is 81,882,036 bytes. Its SHA-256 checksum is:</p>
+<p class="sum"><code>ed078d197c7a57f382637bcd9104440295d1a916ee23c6ce318c47df27322f98</code></p>
 <p>Earlier downloads and their files are listed on <a href="https://github.com/CustomGPTer/grab/releases">GitHub Releases</a>, and the <a href="https://github.com/CustomGPTer/grab/tree/source">source code</a> is on GitHub. To report a problem with a version, <a href="https://github.com/CustomGPTer/grab/issues">open an issue on GitHub</a>.</p>
 </div>
 </div>

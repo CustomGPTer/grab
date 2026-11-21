@@ -26,6 +26,8 @@
 <link rel="preload" href="assets/fonts/literata-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css?v=2">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Grab","item":"https://customgpter.github.io/grab/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://customgpter.github.io/grab/compare.html"}]}</script>
+<link rel="stylesheet" href="assets/apps-list.css?v=1">
+<script src="assets/apps-list.js?v=1" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -40,9 +42,9 @@
 <div class="measure">
 <h1>Free in Grab, with adverts or a price elsewhere</h1>
 <p class="lede">Grab has no paid version, no subscription and no adverts. Other well-known Android downloaders pay their way with adverts, and one sells an edition without them.</p>
-<div class="get">
-<a class="button" href="https://github.com/CustomGPTer/grab/releases/latest/download/Grab.apk">Download for Android</a>
-<p class="facts">Free. Android 10 or later. <a href="./#features">What it does</a></p>
+<div class="gate-scope" id="download"><div class="law-box" data-gate><label><input type="checkbox"> I understand and will use this app within the law</label><p>Grab downloads things other people own. <a href="terms.html#law">What the law says</a></p><noscript><p>Turn on JavaScript to tick the box and download.</p></noscript></div><div class="get">
+<a class="button" data-href="https://github.com/CustomGPTer/grab/releases/latest/download/Grab.apk" aria-disabled="true" role="link" tabindex="-1">Download for Android</a>
+<p class="facts">Free. Android 10 or later. <a href="./#features">What it does</a></p></div>
 </div>
 <h2 id="paid">Downloaders on Google Play</h2>
 <p>1DM, Video Downloader by InShot and Advanced Download Manager are each free to install from Google Play. For each feature, the table shows whether it comes with the free app, only with a paid edition, or is not mentioned by the app's maker.</p>
@@ -71,7 +73,7 @@
 <thead><tr><th scope="col">&nbsp;</th><th scope="col" class="ours">Grab</th><th scope="col">Seal</th><th scope="col">YTDLnis</th><th scope="col">NewPipe</th></tr></thead>
 <tbody>
 <tr><th scope="row">Finding a video</th><td class="ours"><span class="app">Grab</span><span class="v">Browse to it in the built-in browser, or share or paste a link</span></td><td><span class="app">Seal</span><span class="v">Share or paste a link</span></td><td><span class="app">YTDLnis</span><span class="v">Share or paste a link, or search</span></td><td><span class="app">NewPipe</span><span class="v">Search and browse inside the app</span></td></tr>
-<tr><th scope="row">Sites it works with</th><td class="ours"><span class="app">Grab</span><span class="v">Those the yt-dlp engine recognises and, on others, the stream the page is playing</span></td><td><span class="app">Seal</span><span class="v">Those the yt-dlp engine recognises</span></td><td><span class="app">YTDLnis</span><span class="v">Those the yt-dlp engine recognises</span></td><td><span class="app">NewPipe</span><span class="v">YouTube, YouTube Music, PeerTube, Bandcamp, SoundCloud and media.ccc.de</span></td></tr>
+<tr><th scope="row">Sites it works with</th><td class="ours"><span class="app">Grab</span><span class="v">Those the yt-dlp engine recognises and, on others, the stream the page is playing</span></td><td><span class="app">Seal</span><span class="v">Those the yt-dlp engine recognises</span></td><td><span class="app">YTDLnis</span><span class="v">Those the yt-dlp engine recognises</span></td><td><span class="app">NewPipe</span><span class="v">Large video and music sites, PeerTube, Bandcamp, SoundCloud and media.ccc.de</span></td></tr>
 <tr><th scope="row">Price and adverts</th><td class="ours"><span class="app">Grab</span><span class="v">Free, with no adverts</span></td><td><span class="app">Seal</span><span class="v">Free, with no adverts</span></td><td><span class="app">YTDLnis</span><span class="v">Free, with no adverts</span></td><td><span class="app">NewPipe</span><span class="v">Free, with no adverts</span></td></tr>
 </tbody>
 </table>
