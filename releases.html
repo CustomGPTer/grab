@@ -56,6 +56,8 @@
 <p><code class="sum">ed078d197c7a57f382637bcd9104440295d1a916ee23c6ce318c47df27322f98</code></p>
 <p>On Windows, run <code>certutil -hashfile Grab.apk SHA256</code> and compare. Every version is signed with the same key, so each one installs over the last and keeps what you have saved.</p>
 <p>Older versions are on the <a href="https://github.com/CustomGPTer/grab/releases">GitHub releases page</a>.</p>
+<h2 id="play-protect">If Google Play Protect blocks it</h2>
+<p><b>Why it happens.</b> Google Play Protect checks apps installed from outside Google Play. Sites change how they serve videos all the time, so Grab fetches the newest version of its download engine once a day. Play Protect is wary of apps that download new code after they are installed, because harmful apps do that too, so it can block Grab whatever the code actually does. It may say "Harmful app blocked" or "This app may be harmful".</p><p><b>What Grab actually does.</b> It is a web browser that saves videos and sound from the pages you open. It has no adverts, no account and no servers of its own, so the developer never sees what you browse or save. Its code is free software, published for every version.</p><p><b>Check your file first.</b> Make sure the SHA-256 checksum of your download matches the one above, so you know it is the genuine file from this page.</p><p><b>To install it.</b> Open the Play Store, tap your profile picture, then Play Protect, then Settings (the cog). Turn off <i>Scan apps with Play Protect</i>. Install Grab, then turn the setting straight back on.</p><p><b>Afterwards.</b> Play Protect may still warn about Grab in a later scan. Updates install over the old version in the same way and keep everything you have saved.</p>
 </div>
 </div>
 </main>
@@ -71,6 +73,7 @@
 <li><a href="./">Home</a></li>
 <li><a href="./compare.html">Compare</a></li>
 <li><a href="./releases.html">Release notes</a></li>
+
 </ul></nav>
 <nav aria-label="Legal"><h2>Legal</h2><ul>
 <li><a href="./privacy.html">Privacy policy</a></li>
